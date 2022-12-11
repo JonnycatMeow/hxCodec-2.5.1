@@ -14,7 +14,7 @@
 ### 1. Install the Haxelib:
 
 ```cmd
-haxelib git hxCodec https://github.com/polybiusproxy/hxCodec.git
+haxelib git hxCodec https://github.com/JonnycatMeow/hxCodec-old.git
 ```
 
 ### 2. Create a folder called `videos` in `assets/preload` folder:
