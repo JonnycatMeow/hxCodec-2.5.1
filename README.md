@@ -97,8 +97,11 @@ Just pull the "lime build windows".
 In order to make your game work with the library, every Linux user (this includes the player) **has to download** "libvlc-dev" and "libvlccore-dev" from your distro's package manager.
 You can also install them through the terminal:
 ```bash
-sudo apt-get install libvlc-dev
-sudo apt-get install libvlccore-dev
+sudo apt-get install libvlc-dev libvlccore-dev
+```
+Arch based distributions 
+```bash
+sudo pacman -S vlc  
 ```
 
 ### Android
