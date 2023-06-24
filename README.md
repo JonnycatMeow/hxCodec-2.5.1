@@ -99,7 +99,7 @@ You can also install them through the terminal:
 ```bash
 sudo apt-get install libvlc-dev libvlccore-dev
 ```
-Arch based distributions 
+### Arch based distributions 
 ```bash
 sudo pacman -S vlc  
 ```
