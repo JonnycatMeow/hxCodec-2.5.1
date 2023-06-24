@@ -35,7 +35,8 @@ LibVLC::LibVLC(void)
 		"--no-stats",
 		"--no-video-title-show",
 		"--text-renderer", "dummy",
-		"--quiet",
+		"--quiet", 
+	        "--reset-plugins-cache",
 		#if PLATFORM_LINUX
 "--no-xlib",
 #endif
@@ -52,7 +53,7 @@ LibVLC::LibVLC(void)
 	
 	int Argc = sizeof(Args) / sizeof(*Args);
 	// libVlcInstance = libvlc_new(Argc, Args);
-	libVlcInstance = libvlc_new(0, NULL);
+	libVlcInstance = libvlc_new(Argc, Args);
 	
 }
 
