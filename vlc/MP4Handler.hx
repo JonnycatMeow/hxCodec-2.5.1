@@ -35,6 +35,10 @@ class MP4Handler extends VlcBitmap
 		{
 			pause();
 		});
+
+		#if mac
+		Sys.putEnv("VLC_PLUGIN_PATH", Path.normalize(Sys.getCwd() + '../MacOS/plugins'));
+		#end    
 	}
 
 	function update(e:Event)
@@ -65,7 +69,7 @@ class MP4Handler extends VlcBitmap
 		return "file://" + fileName;
 		#end
 	}
-	#end
+	#end 
 
 	function onVLCVideoReady()
 	{
