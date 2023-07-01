@@ -2,7 +2,8 @@ package vlc;
 
 import openfl.events.Event;
 import flixel.FlxG;
-import vlc.bitmap.VlcBitmap;
+import vlc.bitmap.VlcBitmap; 
+import haxe.io.Path;
 
 /**
  * Play a video using cpp.
