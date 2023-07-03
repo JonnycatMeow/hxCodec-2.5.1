@@ -36,15 +36,15 @@ LibVLC::LibVLC(void)
 		"--no-video-title-show",
 		"--text-renderer", "dummy",
 		"--quiet", 
-	        "--reset-plugins-cache",
+	    "--reset-plugins-cache", 
+		"--plugins-scan", // scans for new plugins 
 		#if PLATFORM_LINUX
-"--no-xlib",
-#endif
-
-#if DEBUG
-"--verbose=2"
-#else
-#endif
+         "--no-xlib",
+        #endif
+        #if DEBUG
+        "--verbose=2"
+        #else
+        #endif
 		//"--no-xlib", //no xlib if linux
 		//"--vout", "vmem"
 		//"--avcodec-hw=dxva2",
