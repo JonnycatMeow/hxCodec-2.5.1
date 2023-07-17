@@ -10,7 +10,8 @@
 
 ## Instructions
 **These are for Friday Night Funkin' mostly so it may not work for your HaxeFlixel project.**
-
+## Note  
+the video has to be 1280 × 720 or else it will crash
 ### 1. Install the Haxelib:
 
 ```cmd
