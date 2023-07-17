@@ -36,8 +36,7 @@ LibVLC::LibVLC(void)
 		"--no-video-title-show",
 		"--text-renderer", "dummy",
 		"--quiet", 
-	    "--reset-plugins-cache", 
-		"--plugins-scan", // scans for new plugins 
+	        "--reset-plugins-cache", 
 		#if PLATFORM_LINUX
          "--no-xlib",
         #endif
