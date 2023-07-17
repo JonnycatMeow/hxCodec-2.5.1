@@ -26,7 +26,6 @@ LibVLC::LibVLC(void)
 {
 	char const *Args[] =
 	{
-		//"--aout", "amem",
 		"--drop-late-frames",
 		"--ignore-config",
 		"--intf", "dummy",
@@ -37,17 +36,10 @@ LibVLC::LibVLC(void)
 		"--text-renderer", "dummy",
 		"--quiet", 
 	        "--reset-plugins-cache", 
+	        "--verbose=2",
 		#if PLATFORM_LINUX
-         "--no-xlib",
-        #endif
-        #if DEBUG
-        "--verbose=2"
-        #else
-        #endif
-		//"--no-xlib", //no xlib if linux
-		//"--vout", "vmem"
-		//"--avcodec-hw=dxva2",
-		//"--verbose=2"
+                "--no-xlib"
+                #endif
 	};	
 	
 	int Argc = sizeof(Args) / sizeof(*Args);
