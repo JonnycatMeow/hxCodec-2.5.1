@@ -104,6 +104,17 @@ sudo apt-get install libvlc-dev libvlccore-dev
 ```bash
 sudo pacman -S vlc  
 ```
+### macOS 
+in Main.hx add this in public function new()
+```haxe
+#if mac 
+Sys.putEnv("VLC_PLUGIN_PATH", Path.normalize(Sys.getCwd() + '../MacOS/plugins'));
+#end 
+```
+after you added that peice of code add this import  where the imports are at in Main.hx
+```haxe
+import haxe.io.Path;
+```
 
 ### Android
 Currently, hxCodec will search the videos only on the external storage (`/storage/emulated/0/appname/yourvideo.mp4`).
