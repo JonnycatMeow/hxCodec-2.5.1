@@ -3,7 +3,6 @@ package vlc;
 import openfl.events.Event;
 import flixel.FlxG;
 import vlc.bitmap.VlcBitmap; 
-import haxe.io.Path;
 
 /**
  * Play a video using cpp.
@@ -37,9 +36,6 @@ class MP4Handler extends VlcBitmap
 			pause();
 		});
 
-		#if mac
-		Sys.putEnv("VLC_PLUGIN_PATH", Path.normalize(Sys.getCwd() + '../MacOS/plugins'));
-		#end    
 	}
 
 	function update(e:Event)
