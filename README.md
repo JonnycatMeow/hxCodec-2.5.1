@@ -95,20 +95,23 @@ You don't need any special instructions in order to build for Windows.
 Just pull the "lime build windows".
 
 ### Linux
-In order to make your game work with the library, every Linux user (this includes the player) **has to download** "libvlc-dev" and "libvlccore-dev" from your distro's package manager.
-You can also install them through the terminal:
-```bash
-sudo apt-get install libvlc-dev libvlccore-dev
+in Main.hx add this in public function new()
+```haxe
+#if linux 
+Sys.putEnv("VLC_PLUGIN_PATH", Path.normalize(Sys.getCwd() + '/plugins')); 
+Sys.putEnv("LD_LIBRARY_PATH", Path.normalize(Sys.getCwd() + '-L/lib/'));
+#end 
 ```
-### Arch based distributions 
-```bash
-sudo pacman -S vlc  
-```
+after you added that peice of code add this import  where the imports are at in Main.hx
+```haxe
+import haxe.io.Path;
+``` 
+
 ### macOS 
 in Main.hx add this in public function new()
 ```haxe
 #if mac 
-Sys.putEnv("VLC_PLUGIN_PATH", Path.normalize(Sys.getCwd() + '../MacOS/plugins'));
+Sys.putEnv("VLC_PLUGIN_PATH", Path.normalize(Sys.getCwd() + '../MacOS/plugins')); 
 #end 
 ```
 after you added that peice of code add this import  where the imports are at in Main.hx

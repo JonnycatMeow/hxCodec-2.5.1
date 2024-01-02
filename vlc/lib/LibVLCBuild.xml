@@ -10,14 +10,20 @@
 			<lib name='${haxelib:hxCodec}/lib/vlc/lib/Windows/libvlc.lib' if='windows'/>
 			<lib name='${haxelib:hxCodec}/lib/vlc/lib/Windows/libvlccore.lib' if='windows'/>
         </section>
+
         <section if="linux">
-			<lib name='${haxelib:hxCodec}/lib/vlc/lib/Linux/libvlc.so.5' if='linux'/>
-			<lib name='${haxelib:hxCodec}/lib/vlc/lib/Linux/libvlccore.so.9' if='linux'/>
+			<lib name='${haxelib:hxCodec}/lib/vlc/lib/Linux/libvlc.so'/>
+			<lib name='${haxelib:hxCodec}/lib/vlc/lib/Linux/libvlccore.so'/> 
+            <lib name='${haxelib:hxCodec}/lib/vlc/lib/Linux/libvlc_pulse.so'/> 
+            <lib name='${haxelib:hxCodec}/lib/vlc/lib/Linux/libvlc_vdpau.so'/> 
+            <lib name='${haxelib:hxCodec}/lib/vlc/lib/Linux/libvlc_xcb_events.so'/>
         </section>
+
         <section if="mac">
 			<lib name='${haxelib:hxCodec}/lib/vlc/lib/Mac/libvlc.5.dylib'/>
 			<lib name='${haxelib:hxCodec}/lib/vlc/lib/Mac/libvlccore.8.dylib'/>
         </section>
+        
         <section if="android">
             <lib name='${haxelib:hxCodec}/ndll/Android/libvlc-v7.so' if='HXCPP_ARMV7' />
             <lib name='${haxelib:hxCodec}/ndll/Android/libvlc-64.so' if='HXCPP_ARM64' />

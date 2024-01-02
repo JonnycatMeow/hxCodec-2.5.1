@@ -2,7 +2,8 @@
 <extension>
 
 	<assets path="include/Mac" rename="../MacOS" if="mac" />
-	<assets path="include/Windows" rename='' if="windows" />
+	<assets path="include/Windows" rename='' if="windows" /> 
+	<assets path="include/Linux" rename='' if="linux" />
 
 	<ndll name="vlc" if="android"/>
 	<ndll name="c++_shared" if="android"/>
